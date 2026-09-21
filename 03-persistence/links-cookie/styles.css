@@ -1,0 +1,319 @@
+/* --- Global Variables --- */
+:root {
+    --primary-color: #d9301d;
+    /* Main color (reddish) */
+    --secondary-color: #6c757d;
+    /* Secondary text color */
+    --background-color: #f8f9fa;
+    /* Body background color */
+    --card-background: #ffffff;
+    /* Card/container background color */
+    --border-color: #ced4da;
+    /* Border color */
+    --text-color: #343a40;
+    /* Main text color */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    /* Shadow color */
+    --border-radius: 8px;
+    /* Border radius */
+    --transition: 0.3s ease;
+    /* Transition for hover effects */
+}
+
+/* --- General and Layout Styles --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0px 0px 120px 0px;  ;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--card-background);
+    margin: 20px;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 20px 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header .logo {
+    height: 50px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.main-content {
+    padding: 30px;
+}
+
+/* --- Form (Main and edit pages) --- */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.form-section label {
+    font-weight: bold;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-group input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    transition: border-color var(--transition);
+}
+
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color var(--transition);
+}
+
+.form-group button:hover {
+    background-color: #b82613;
+}
+
+/* --- Link List (Main page) --- */
+.link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition);
+}
+
+.link-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.link-info {
+    flex-grow: 1;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 15px 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    /* Aliniat amb el contenidor principal */
+    margin: 0 auto;
+}
+
+.footer-logo {
+    height: 30px;
+    /* Ajusta la mida del logo */
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 0.9em;
+}
+
+.footer-right span {
+    margin: 2px 0;
+}
+
+.mit-license {
+    font-weight: bold;
+    color: #ffd700;
+    /* Un color que destaqui per a la llicència */
+}
+
+.simple-list-header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 20px 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.simple-list-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.simple-list-header h1 span {
+    font-size: 1.2em;
+}
+
+.list-container {
+    padding: 30px;
+}
+
+.link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-item-simple {
+    padding: 15px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition);
+}
+
+.link-item-simple:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.link-name {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.link-url-simple {
+    color: var(--secondary-color);
+    font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+
+/* --- Formulari per a la llista d'enllaços --- */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+
+/* --- Formulari per a la llista d'enllaços (versió en línia) --- */
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--text-color);
+    /* Desactiva el "flex-shrink" per evitar que l'etiqueta es comprimeixi */
+    flex-shrink: 0;
+}
+    
+.form-group input[type="text"] {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    transition: border-color var(--transition);
+    
+    /* Fa que l'input ompli tot l'espai disponible */
+    flex-grow: 1;
+}
+
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color var(--transition);
+    align-self: flex-start; /* Alinia el botó a l'esquerra */
+}
+
+.submit-btn:hover {
+    background-color: #b82613;
+}
