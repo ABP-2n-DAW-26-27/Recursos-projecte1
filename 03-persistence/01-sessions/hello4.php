@@ -8,8 +8,8 @@ if(isset($_SESSION["names"])){
     $names = [];
 }
 
-if(isset($_GET["userName"])){
-  $userName = $_GET["userName"];
+if(isset($_GET["userName"]) && !empty(trim($_GET["userName"]))){
+  $userName = htmlspecialchars(trim($_GET["userName"]));
   $_SESSION["lastName"] = $userName;
   $message = $message . $userName . "!";
   

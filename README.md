@@ -27,7 +27,7 @@ This repository contains example files to help you with the first project in the
 - This folder contains:
   - Storing data using **sessions** and **cookies**
   - Managing data in **files**
-  - Combining sessions/cookies/files with the link manager
+  - Combining sessions/cookies with the link manager and Files with a Gallery
 - Examples:
   - Count and track greeted names with sessions and cookies
   - Three versions of the link manager: using sessions, cookies, and files
