@@ -11,6 +11,10 @@
     <div class="container">
         <header class="header">
             <h1><span>✏️</span> Afegir imatge</h1>
+            <nav class="main-nav" aria-label="Navegació principal">
+                <a href="index.php">Afegir imatge</a>
+                <a href="gallery.php">Galeria</a>
+            </nav>
         </header>
         <main class="main-content">
             <form action="add.php" method="POST" enctype="multipart/form-data" >
@@ -25,6 +29,7 @@
             </section>
             </form>
         </main>
+        <?php include("footer.php"); ?>
     </div>
 </body>
 </html>

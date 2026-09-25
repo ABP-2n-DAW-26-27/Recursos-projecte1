@@ -239,7 +239,6 @@ $_SESSION["names"] = $names;
 
             <div class="name-list-container">
                 <h3>Qui hem saludat?</h3>
-                <!-- Work in progress -->
                 <ul class="name-list">
                     <?php
                     foreach($names as $name => $count){
@@ -247,7 +246,6 @@ $_SESSION["names"] = $names;
                     <li><span><?=$name;?></span> <span class="name-count"><?=$count;?></span></li>
                     <?php } ?>
                 </ul>
-                <!-- Work in progress -->
             </div>
         </div>
 

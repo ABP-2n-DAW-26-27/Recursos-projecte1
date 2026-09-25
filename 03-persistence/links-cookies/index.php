@@ -46,7 +46,7 @@ if(isset($_COOKIE["links"])){
             </div>
             <div class="footer-right">
                 <span>Mòdul 613 Desenvolupament d'Aplicacions Web en entorn servidor</span>
-                <span>Curs: 2025-2026</span>
+                <span>Curs: 2026-2027</span>
                 <span class="mit-license">Llicència MIT</span>
             </div>
         </div>
