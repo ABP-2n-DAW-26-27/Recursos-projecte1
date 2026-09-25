@@ -1,6 +1,6 @@
 <?php
 
-$images = glob("./uploads/*");
+$images = glob( "./uploads/*.{jpg,jpeg,png,gif,webp}", GLOB_BRACE);
 
 //print_r($images);
 ?>
