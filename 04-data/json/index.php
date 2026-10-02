@@ -1,5 +1,11 @@
 <?php
+session_start();
 //$json = $_COOKIE["dades"] ?? [];
+
+$error = $_GET["error"] ?? 0;
+
+$descripcio = $_SESSION["descripcio"] ?? "";
+$url = $_SESSION["url"] ?? "";
 
 $json = file_exists("dades.json") ? file_get_contents("dades.json") : "[]";
 //$dades = json_decode($json, true);
@@ -49,15 +55,22 @@ $json = file_exists("dades.json") ? file_get_contents("dades.json") : "[]";
             <h1>Gestor d'enllaços</h1>
             <p>Desa i consulta els teus recursos preferits.</p>
         </header>
+        <?php if($error >0) {?>
+        <div>
+            Falten dades al formulari.
+        </div>
+        <?php } ?>
 
         <form action="save.php" method="post">
             <label for="descripcio">Descripció</label>
             <input type="text" id="descripcio" name="descripcio"
-                placeholder="Ex. Documentació de PHP" required>
+                placeholder="Ex. Documentació de PHP"
+                value="<?= $descripcio ?>">
 
             <label for="url">Enllaç</label>
             <input type="url" id="url" name="url"
-                placeholder="https://exemple.cat" required>
+                placeholder="https://exemple.cat"
+                value="<?= $url; ?>">
 
             <button type="submit">Desar enllaç</button>
         </form>

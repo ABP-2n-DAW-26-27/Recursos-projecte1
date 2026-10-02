@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $json = file_get_contents("dades.json");
 
@@ -8,17 +9,22 @@ if (!is_array($dades)) {
     $dades = [];
 }
 
+$error = false;
 $descripcio = htmlspecialchars(trim($_POST["descripcio"] ?? ""));
 $url = trim($_POST["url"] ?? "");
 
-if($descripcio === '') {
-    $descripcio = $url;
-}
+$error = $descripcio === "";
+$error =  $error || ($url === "" or !filter_var($url, FILTER_VALIDATE_URL));
 
-if($url === "" or !filter_var($url, FILTER_VALIDATE_URL)) {
+$_SESSION["descripcio"] = $descripcio;
+$_SESSION["url"] = $url;
+
+if($error){
     header("Location: index.php?error=1");
     exit();
 }
+$_SESSION["descripcio"] = "";
+$_SESSION["url"] = "";
 
 $dades[] = [
     "descripcio" => $descripcio,
